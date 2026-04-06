@@ -12,7 +12,7 @@ L82
 
 function handleDialState(oldState, stepsToRotateRight)
 {
-    console.assert(oldState >= -100);
+    console.assert(oldState >= 0);
     console.assert(oldState <= 100);
     console.assert(stepsToRotateRight >= -100);
     console.assert(stepsToRotateRight <= 100);
@@ -62,7 +62,6 @@ function processLines(linez, initialState = 50)
 lines = example_1.split("\n").filter((item) => item.trim() != "");
 resultz = processLines(lines, 50);
 res_json = JSON.parse(resultz);
-console.log("endState => "+res_json["endState"]);
-console.log("password => "+res_json["password"]);
-
+console.log(`endState => ${res_json["endState"]}`);
+console.log(`password => ${res_json["password"]}`);
 
